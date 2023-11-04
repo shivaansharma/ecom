@@ -5,6 +5,7 @@ import Shopcat from './pages/Shopcat'
 import Product from './pages/Product'
 import Cart from './pages/Cart'
 import Login_signup from './pages/Login_signup'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
     <Route path='/login' element={<Login_signup/>}/>
     
     </Routes>
+    <Footer/>
     </BrowserRouter>
     </>
   )
