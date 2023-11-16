@@ -17,13 +17,13 @@ function Navbar() {
     </NavLink>
   </li>
   <li className='mr-4 font-mono'>
-    <NavLink to='/mens' className={({isActive})=>(isActive?'underline':'no-underline')}>Mens</NavLink>
+    <NavLink to='/men' className={({isActive})=>(isActive?'underline':'no-underline')}>Mens</NavLink>
   </li>
   <li className='mr-4 font-mono'>
-    <NavLink to='/womens' className={({isActive})=>(isActive?'underline':'no-underline')}>Women</NavLink>
+    <NavLink to='/women' className={({isActive})=>(isActive?'underline':'no-underline')}>Women</NavLink>
   </li>
   <li className='mr-2 font-mono'>
-    <NavLink to='/kids' >Kids</NavLink>
+    <NavLink to='/kid' className={({isActive})=>(isActive?'underline':'no-underline')}>Kids</NavLink>
   </li>
 </ul>
 
