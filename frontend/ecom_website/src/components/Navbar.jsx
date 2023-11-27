@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import logo from '../Assets/logo.png'
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
+import { ShopContext } from '../context/ShopContext';
 function Navbar() {
+  const{getTotalCart}=useContext(ShopContext)
   return (
    <>
    <div className='flex justify-between items-center p-4'>
@@ -34,7 +36,7 @@ function Navbar() {
    
 <NavLink to='/cart'><AiOutlineShoppingCart className='text-4xl hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105' />
     </NavLink>
-<div className=''>0</div>
+<div className=''>{getTotalCart()}</div>
     </div>
    </div>
    <div>

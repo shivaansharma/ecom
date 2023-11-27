@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import star from '/src/Assets/star_icon.png';
 import starDull from '../Assets/star_dull_icon.png';
+import { ShopContext } from '../context/ShopContext';
 
 function ProductDisplay(props) {
   const { product } = props;
-
+  const {addTocart} = useContext(ShopContext)
   return (
     <div className="flex">
       <div className="flex">
@@ -46,7 +47,7 @@ function ProductDisplay(props) {
                 </div>
               ))}
             </div>
-            <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
+            <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded" onClick={()=>{addTocart(product.id)}}>Add to Cart</button>
           </div>
         </div>
       </div>
